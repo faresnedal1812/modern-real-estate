@@ -2,11 +2,11 @@
   "name": "modern-real-estate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api/index.js",
   "type": "module",
   "scripts": {
-    "start": "node api/index.js",
-    "dev": "nodemon api/index.js",
+    "start": "cross-env NODE_ENV=production node api/index.js",
+    "dev": "cross-env NODE_ENV=development nodemon api/index.js",
     "build": "npm install && npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
@@ -21,6 +21,7 @@
     "mongoose": "^8.7.3"
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "nodemon": "^3.1.7"
   }
 }
